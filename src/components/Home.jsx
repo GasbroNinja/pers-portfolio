@@ -17,7 +17,7 @@ const Home = () => {
                 Jr. Front-end Developer
               </h4>
             </div>
-            <div className="d-flex flex-wrap align-items-center justify-content-center my-md-5 pt-lg-0 mt-lg-5 text-center">
+            <div className="d-flex align-items-center justify-content-center my-md-5 pt-lg-0 mt-lg-5 text-center">
               <h4 className="lineheightnav mx-3">
                 My official <span className="text_diff"> Portfolio</span>
                 <br />
