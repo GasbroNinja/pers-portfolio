@@ -1,8 +1,12 @@
+html{
+  font-family: 'Palanquin', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Palanquin', sans-serif;
-  color: white
+  color: #ffffff
 }
 
 
@@ -36,7 +40,23 @@ section {
 .backgroundSects{
   width: 100%;
   height: 100vh;
-  background: linear-gradient(0deg, rgba(110, 24, 167, 1) 6%, rgba(172, 60, 199, 1) 50%, rgba(110, 24, 167, 1) 94%);
+  background: linear-gradient(90deg, rgba(110, 24, 167, 1) 6%, rgba(199, 60, 187, 1) 35%, rgba(208, 71, 193, 1) 62%, rgba(167, 24, 101, 1) 94%);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .lineheightnav{
@@ -46,14 +66,12 @@ section {
 .nav {
   display: flex;
   align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
+
+  position: fixed;
   top: -5px;
   z-index: 100;
-  height: 70px;
-  min-height: 70px;
   width: calc(100%);
-  background-color: #00000001;
+  background-color: #0000006d;
   padding-top: 5px;
   box-shadow: 5px 6px 2px 0 rgba(33, 0, 50, 0.197);
 }
@@ -72,10 +90,82 @@ section {
 .nav__container__actions {
   display: inline-flex;
   flex-flow: row nowrap;
-  padding-left: 50px;
+  
   flex: 1;
+}
+
+.carousel_Dims{
+  max-width: 1000px;
+  max-height: 900px;
+}
+
+.txtnav{
+  color: rgb(254, 229, 254);
+}
+
+.txtnav:hover{
+  color: rgba(220, 33, 170, 0.9);
 }
 
 .active {
   font-weight: bold;
+  text-decoration: none;
+  color: rgba(255, 111, 217, 0.9);
+  text-shadow: 3px 10px 6px 0 white;
+}
+
+.formatCarous{
+  max-width: 400px;
+  max-height: 600px;
+  margin: auto;
+  background-position: center;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+
+.padClass1{
+  margin-top: 200px;
+}
+
+/* CSS STYLING TEXT */
+
+.text_diff{
+  background: linear-gradient(90deg, rgb(198, 118, 251) 6%, rgb(99, 2, 91) 35%, rgb(65, 0, 57) 62%, rgb(198, 118, 251) 94%);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  box-shadow: 1px 4px 6px 0 rgba(153, 11, 255, 0.634);
+  border-radius: 35px;
+  padding: 0 10px;
+  font-weight: 700;
+}
+
+
+.gasbroC {
+  margin: 0;
+  color: #d9316c;
+  font-size: calc(1em + 20vw);
+  font-weight: 900;
+  text-shadow: -0.0075em 0.0075em 0 #f382e8, 0.005em 0.005em 0 #f6a5c1, 0.01em 0.01em 0 #f7aac4, 0.015em 0.015em #f7aec7, 0.02em 0.02em 0 #cb6486, 0.025em 0.025em 0 #f8b7cd, 0.03em 0.03em 0 #f8bcd0, 0.035em 0.035em 0 #9c274e;
+}
+
+.gasbroC2 {
+  color: #ac19d9;
+  font-size: calc(0.5em + 10vw);
+  font-weight: 700;
+  text-shadow: -0.0075em 0.0075em 0 #f382e8, 0.005em 0.005em 0 #f6a5c1, 0.01em 0.01em 0 #f7aac4, 0.015em 0.015em #f7aec7, 0.02em 0.02em 0 #c464cb, 0.025em 0.025em 0 #f8b7cd, 0.03em 0.03em 0 #f8bcd0, 0.035em 0.035em 0 #90279c;
+}
+
+.myMask{
+  background-image: url("../src/assets/avatar.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/sun.svg");
+  mask-size: 99%;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
