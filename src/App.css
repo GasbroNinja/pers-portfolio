@@ -172,6 +172,8 @@ section {
   animation: polygono 7s ease-in-out infinite
 }
 
+/* Check changing image with keyframes if possible */
+
 @keyframes polygono {
   0% {
       clip-path: polygon(34% 8%, 9% 68%, 72% 95%, 83% 42%);
