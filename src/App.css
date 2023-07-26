@@ -66,7 +66,6 @@ section {
 .nav {
   display: flex;
   align-items: center;
-
   position: fixed;
   top: -5px;
   z-index: 100;
@@ -147,8 +146,8 @@ section {
 .gasbroC {
   margin: 0;
   color: #d9316c;
-  font-size: calc(1em + 20vw);
-  font-weight: 900;
+  font-size: calc(0.4em + 16vw);
+  font-weight: 700;
   text-shadow: -0.0075em 0.0075em 0 #f382e8, 0.005em 0.005em 0 #f6a5c1, 0.01em 0.01em 0 #f7aac4, 0.015em 0.015em #f7aec7, 0.02em 0.02em 0 #cb6486, 0.025em 0.025em 0 #f8b7cd, 0.03em 0.03em 0 #f8bcd0, 0.035em 0.035em 0 #9c274e;
 }
 
@@ -160,12 +159,41 @@ section {
 }
 
 .myMask{
+  
+  max-width: 100%;
   background-image: url("../src/assets/avatar.jpeg");
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/sun.svg");
-  mask-size: 99%;
+  mask-size: 90%;
   mask-repeat: no-repeat;
   mask-position: center;
+  clip-path: polygon(34% 8%, 9% 68%, 72% 95%, 83% 42%);
+  animation: polygono 7s ease-in-out infinite
+}
+
+@keyframes polygono {
+  0% {
+      clip-path: polygon(34% 8%, 9% 68%, 72% 95%, 83% 42%);
+      background-image: url("../src/assets/avatar.jpeg");
+    }
+  
+    50% {
+      clip-path: polygon(44% 8%, 9% 78%, 72% 95%, 93% 42%);
+      background-image: url("../src/assets/avatar2.jpeg");
+    }
+  
+    100% {
+      clip-path: polygon(34% 8%, 9% 68%, 72% 95%, 83% 42%);
+      background-image: url("../src/assets/avatar.jpeg");
+    }
+}
+
+.imgRel1{
+  position: relative;
+}
+
+.imgSize1{
+  max-width: 500px;
+  max-height: 500px;
 }
