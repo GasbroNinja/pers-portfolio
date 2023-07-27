@@ -27,15 +27,18 @@ section {
 
 
 .backgroundContainer {
-  height: 100%;
-  background-image: url("../src/assets/purple-night-ride-4k-qz-edit.jpg");
+  width: 100%;
+  height: 100vh;
+  background-image: url("../src/assets/logo-gasbro.png");
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-repeat: repeat;
+  background-size: 130%;
   object-fit: cover;
   overflow-x: none;
   scroll-snap-align: start;
 }
+
+
 
 .backgroundSects{
   width: 100%;
@@ -117,8 +120,9 @@ section {
   max-width: 400px;
   max-height: 600px;
   margin: auto;
+  background-size: auto;
   background-position: center;
-  object-fit: contain;
+  object-fit: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,15 +149,15 @@ section {
 
 .gasbroC {
   margin: 0;
-  color: #d9316c;
-  font-size: calc(0.4em + 16vw);
+  color: #8d01ff;
+  font-size: calc(1em + 10vw);
   font-weight: 700;
   text-shadow: -0.0075em 0.0075em 0 #f382e8, 0.005em 0.005em 0 #f6a5c1, 0.01em 0.01em 0 #f7aac4, 0.015em 0.015em #f7aec7, 0.02em 0.02em 0 #cb6486, 0.025em 0.025em 0 #f8b7cd, 0.03em 0.03em 0 #f8bcd0, 0.035em 0.035em 0 #9c274e;
 }
 
 .gasbroC2 {
   color: #ac19d9;
-  font-size: calc(0.5em + 10vw);
+  font-size: calc(0.5em + 6vw);
   font-weight: 700;
   text-shadow: -0.0075em 0.0075em 0 #f382e8, 0.005em 0.005em 0 #f6a5c1, 0.01em 0.01em 0 #f7aac4, 0.015em 0.015em #f7aec7, 0.02em 0.02em 0 #c464cb, 0.025em 0.025em 0 #f8b7cd, 0.03em 0.03em 0 #f8bcd0, 0.035em 0.035em 0 #90279c;
 }

@@ -12,26 +12,31 @@ function CarouselHome() {
   };
 
   return (
-    <Carousel className="p-0" fade activeIndex={index} onSelect={handleSelect}>
+    <Carousel
+      className="p-0 formatCarous"
+      fade
+      activeIndex={index}
+      onSelect={handleSelect}
+    >
       <Carousel.Item>
-        <div className=" d-flex justify-content-center">
-          <img src={C_img1} alt="img1" className="formatCarous" />
+        <div className="formatCarous d-flex justify-content-center">
+          <img src={C_img1} alt="img1" className="imgSize1" />
         </div>
         <Carousel.Caption>
           <h3 className="text_diff">Professional Design</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <div className=" d-flex justify-content-center">
-          <img src={C_img2} alt="img2" className="formatCarous" />
+        <div className="formatCarous d-flex justify-content-center">
+          <img src={C_img2} alt="img2" className="imgSize1" />
         </div>
         <Carousel.Caption>
           <h3 className="text_diff">Actitude</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <div className=" d-flex justify-content-center">
-          <img src={C_img3} alt="img3" className="formatCarous" />
+        <div className="formatCarous d-flex justify-content-center">
+          <img src={C_img3} alt="img3" className="imgSize1" />
         </div>
         <Carousel.Caption>
           <h3 className="text_diff">Able to Work</h3>
