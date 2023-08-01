@@ -1,6 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
 import Home from "./components/Home";
 import MainComp from "./components/MainComp";
 import Services from "./components/Services";

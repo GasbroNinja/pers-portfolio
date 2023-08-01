@@ -24,6 +24,38 @@ section {
   font-size: 24px;
 }
 
+/*-------SWIPER CSS LIBRARY----------*/
+
+.swiperCont{
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  width: 500px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.swiper-slide img {
+  display: block;
+  width:100%;
+}
+
+.img2_Carousel_Sized{
+  width: 100%;
+  
+  object-fit: contain;
+}
+
+/*--------END SWIPER CSS-----------*/
 
 
 .backgroundContainer {
@@ -146,6 +178,66 @@ section {
   font-weight: 700;
 }
 
+.text_diff2 {
+  background: linear-gradient(90deg, rgb(198, 118, 251) 6%, rgb(99, 2, 91) 35%, rgb(65, 0, 57) 62%, rgb(198, 118, 251) 94%);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  box-shadow: 1px 4px 6px 0 rgba(153, 11, 255, 0.634);
+  border-radius: 35px;
+  padding: 0 20px;
+  font-weight: 700;
+  overflow: hidden;
+  position: relative;
+}
+
+.text_diff2::after{
+  content: "";
+  display: inline-block;
+  animation: animationText 5.5s steps(20) infinite;
+  width: 3ch;
+  color: rgb(255, 182, 193);
+  
+}
+
+.text_diff2::before{
+  display: inline-block;
+  content: "";
+  width: 5px;
+  padding: 0 12px ;
+  height: 100%;
+  background-color: #db11ff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  animation: blinking .4s linear alternate infinite;
+}
+
+@keyframes animationText {
+  0%{
+    content: "Front-ender";
+  }
+  20%{
+    content: " Designer";
+    width: 8.5ch;
+  }
+  40%{
+    width: 0ch;
+  }
+  75%{
+    content:"Tech Enthusiast";
+    width: 9.5ch;
+  }
+  90%{
+    content: "Front-ender";
+    width: 0ch;
+  }
+}
+
+@keyframes blinking{
+  100%{
+    opacity: 0;
+  }
+}
 
 .gasbroC {
   margin: 0;
@@ -202,4 +294,16 @@ section {
 .imgSize1{
   max-width: 500px;
   max-height: 500px;
+}
+
+.logosSized{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  
+  align-items: center;
+  width: 55%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  
 }

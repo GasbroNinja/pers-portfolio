@@ -62,17 +62,17 @@ const Services = () => {
           <h1 className=" gasbroC2 fw-bold fst-italic">Services</h1>
         </div>
         <Container className=" d-flex flex-wrap justify-content-around align-items-center pt-5">
-          <div className=" d-flex flex-column align-items-center justify-content-center py-md-3 mt-md-3 py-lg-5 mt-lg-0">
+          <div className=" d-flex align-items-center justify-content-center py-md-3 mt-md-3 py-lg-5 mt-lg-0">
             <Row className="d-flex align-items-center justify-content-center my-md-5 pt-lg-0 mt-lg-0 text-center">
               <h4 className="lineheightnav ">
                 <Col
-                  xs={4}
-                  sm={4}
-                  md={4}
-                  lg={4}
-                  xl={4}
-                  xxl={4}
-                  className="d-flex flex-column align-items-center justify-content-start"
+                  xs={6}
+                  sm={6}
+                  md={6}
+                  lg={6}
+                  xl={6}
+                  xxl={6}
+                  className="d-flex align-items-center justify-content-start"
                 >
                   <span className="text_diff px-4 me-3">Structure</span>
                   <br />
@@ -95,17 +95,27 @@ const Services = () => {
             </Row>
           </div>
           <div className="d-flex align-items-center justify-content-center ">
-            <div className="d-flex flex-column px-3">
+            <div className="d-flex align-items-center justify-content-center px-5">
               {imagesList &&
                 imagesList.map((image) => (
-                  <img
-                    key={image.id}
-                    src={image.src}
-                    alt={image.alt}
-                    width={100}
-                    height={100}
-                    className=""
-                  />
+                  <Col
+                    xs={2}
+                    sm={2}
+                    md={2}
+                    lg={2}
+                    xl={2}
+                    xxl={2}
+                    className="d-flex flex-row align-items-center justify-content-center"
+                  >
+                    <img
+                      key={image.id}
+                      src={image.src}
+                      alt={image.alt}
+                      width={100}
+                      height={100}
+                      className="logosSized"
+                    />
+                  </Col>
                 ))}
             </div>
           </div>

@@ -1,49 +1,52 @@
-import { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 import C_img1 from "../assets/logo-gasbro.png";
 import C_img2 from "../assets/4-06-2023-TalentoDay.png";
 import C_img3 from "../assets/graduation-guscina.png";
+import { Container } from "react-bootstrap";
 
-function CarouselHome() {
-  const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
+const CarouselHome = () => {
 
   return (
-    <Carousel
-      className="p-0 formatCarous"
-      fade
-      activeIndex={index}
-      onSelect={handleSelect}
-    >
-      <Carousel.Item>
-        <div className="formatCarous d-flex justify-content-center">
-          <img src={C_img1} alt="img1" className="imgSize1" />
-        </div>
-        <Carousel.Caption>
-          <h3 className="text_diff">Professional Design</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="formatCarous d-flex justify-content-center">
-          <img src={C_img2} alt="img2" className="imgSize1" />
-        </div>
-        <Carousel.Caption>
-          <h3 className="text_diff">Actitude</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="formatCarous d-flex justify-content-center">
-          <img src={C_img3} alt="img3" className="imgSize1" />
-        </div>
-        <Carousel.Caption>
-          <h3 className="text_diff">Able to Work</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <Container className="swiperCont">
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={1}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <img src={C_img1} alt="pic1" width={400} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={C_img2}
+            alt="pic2"
+            width={400}
+            height={300}
+            className="img2_Carousel_Sized"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={C_img3} alt="pic3" width={300} />
+        </SwiperSlide>
+      </Swiper>
+    </Container>
   );
+  
+
+  
 }
 
 export default CarouselHome;
