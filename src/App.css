@@ -273,22 +273,27 @@ section {
 @keyframes polygono {
   0% {
       clip-path: polygon(34% 8%, 9% 68%, 72% 95%, 83% 42%);
-      background-image: url("../src/assets/avatar.jpeg");
     }
   
     50% {
       clip-path: polygon(44% 8%, 9% 78%, 72% 95%, 93% 42%);
-      background-image: url("../src/assets/avatar2.jpeg");
     }
   
     100% {
       clip-path: polygon(34% 8%, 9% 68%, 72% 95%, 83% 42%);
-      background-image: url("../src/assets/avatar.jpeg");
     }
 }
 
 .imgRel1{
   position: relative;
+}
+
+.zoomImgs{
+  transform: scale(1);
+}
+
+.zoomImgs::selection{
+  transform: scale(3);
 }
 
 .imgSize1{

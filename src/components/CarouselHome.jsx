@@ -27,7 +27,7 @@ const CarouselHome = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={C_img1} alt="pic1" width={400} />
+          <img src={C_img1} alt="pic1" width={400} className="zoomImgs" />
         </SwiperSlide>
         <SwiperSlide>
           <img
@@ -35,11 +35,11 @@ const CarouselHome = () => {
             alt="pic2"
             width={400}
             height={300}
-            className="img2_Carousel_Sized"
+            className="zoomImgs img2_Carousel_Sized"
           />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={C_img3} alt="pic3" width={300} />
+          <img src={C_img3} alt="pic3" width={300} className="zoomImgs" />
         </SwiperSlide>
       </Swiper>
     </Container>
